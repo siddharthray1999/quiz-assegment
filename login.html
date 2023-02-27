@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main-body">
+      <h1>Log in</h1>
+      <form action="#">
+        <input type="text" placeholder="UserName" id="UserName" />
+        <input type="text" placeholder="Password" id="password" />
+        <div class="recover"><a href="#">Forget Password?</a></div>
+      </form>
+
+      <button onclick="auth()">Login</button>
+      <div class="member">
+        Already a member? <a href="./sign.html">Register Now</a>
+      </div>
+    </div>
+    <script>
+      function auth() {
+        var UserName = document.getElementById("UserName").value;
+        var password = document.getElementById("password").value;
+        if (UserName == "admin@gmail.com" && password == "admin123") {
+          window.location.assign("quiz.html");
+          alert("login successfully");
+        } else {
+          alert("invalid information");
+          return;
+        }
+      }
+    </script>
+  </body>
+</html>
